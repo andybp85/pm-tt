@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7887e3e4-77e9-4b82-ad70-33d61958d92c" name="Default" comment="custom menu working">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/menu/menuItems.ts" afterPath="$PROJECT_DIR$/src/menu/menu.ts" />
+    <list default="true" id="7887e3e4-77e9-4b82-ad70-33d61958d92c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/menu/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/menu/index.ts" afterPath="$PROJECT_DIR$/src/menu/index.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/menu/menuView.ts" afterPath="$PROJECT_DIR$/src/menu/menuView.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -265,12 +263,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1507131615218</updated>
-      <workItem from="1507131616383" duration="10307000" />
+      <workItem from="1507131616383" duration="10409000" />
     </task>
+    <task id="LOCAL-00001" summary="custom menu working">
+      <created>1507143119101</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1507143119101</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10307000" />
+    <option name="totallyTimeSpent" value="10409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="22" width="1680" height="1024" extended-state="6" />
