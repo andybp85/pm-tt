@@ -2,7 +2,7 @@ import {EditorView} from "prosemirror-view"
 
 export default class MenuView {
 
-    private items: Array<any>
+    private items: any[]
     private editorView: EditorView
     public dom: Element
 
