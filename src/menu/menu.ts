@@ -6,22 +6,22 @@ import {menuPlugin} from "./menuPlugin"
 
 // Helper function to create menu icons
 function icon(text, name) {
-    let span = document.createElement("span")
-    span.className = "menuicon " + name
-    span.title = name
-    span.textContent = text
-    return span
+  let span = document.createElement("span")
+  span.className = "menuicon " + name
+  span.title = name
+  span.textContent = text
+  return span
 }
 
 function heading(level, thisIcon, thisName) {
-    return {
-        command: setBlockType(schema.nodes.heading, {level}),
-        dom: icon(thisIcon, thisName)
-    }
+  return {
+    command: setBlockType(schema.nodes.heading, {level}),
+    dom: icon(thisIcon, thisName)
+  }
 }
 
 function subHeader() {
-    return heading(2, "H", "Subheader")
+  return heading(2, "H", "Subheader")
 }
 
 function bold() {
