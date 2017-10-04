@@ -9,6 +9,8 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     host: "127.0.0.1",
+    publicPath: '/',
+    contentBase: "./dist/",
     hot: true
   },
   plugins: [
@@ -33,7 +35,6 @@ module.exports = {
     },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
     filename: 'bundle.js'
   }
 };
