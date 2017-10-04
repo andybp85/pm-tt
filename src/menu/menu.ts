@@ -1,4 +1,3 @@
-import "./styles.css"
 import {toggleMark, setBlockType, wrapIn} from "prosemirror-commands"
 import {schema} from "prosemirror-schema-basic"
 
