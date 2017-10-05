@@ -1,4 +1,3 @@
 import "./styles.css"
-import {TooltipPlugin} from "./tooltipPlugin"
 
-export let tooltip = TooltipPlugin
+export {TooltipPlugin} from "./tooltipPlugin"

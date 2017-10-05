@@ -1,6 +1,6 @@
 import {EditorView} from "prosemirror-view"
 
-export default class MenuView {
+export class MenuView {
 
   private items: any[]
   private editorView: EditorView
