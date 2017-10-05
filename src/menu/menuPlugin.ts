@@ -1,5 +1,5 @@
 import {Plugin} from "prosemirror-state"
-import {MenuView} from "./menuView"
+import {MenuView} from "./MenuView"
 
 export function menuPlugin(items) {
   return new Plugin({

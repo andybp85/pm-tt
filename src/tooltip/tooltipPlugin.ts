@@ -1,7 +1,7 @@
 import {Plugin} from "prosemirror-state"
 
-import Tooltip from "./tooltip"
+import Tooltip from "./Tooltip"
 
-export let TooltipPlugin = new Plugin({
+export let tooltipPlugin = new Plugin({
   view(editorView) { return new Tooltip(editorView) }
 })

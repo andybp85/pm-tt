@@ -29,6 +29,7 @@ function toggleBlockType(nodeType, attrs) {
       let where = $from.before(depth + 1)
 
       // this part is different, - revert to p if it's already a whatever node
+      // this might be better to do with history
       if (target.hasMarkup(nodeType, attrs)) {                      // tslint:disable-line curly
         dispatch(state.tr
           .clearIncompatible(where, nodeType)

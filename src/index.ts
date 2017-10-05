@@ -6,9 +6,9 @@ import {keymap} from "prosemirror-keymap"
 import {baseKeymap} from "prosemirror-commands"
 
 import {menuPlugin, subHeader, bold} from "./menu/index"
-import {TooltipPlugin} from "./tooltip/index"
+import {tooltipPlugin} from "./tooltip/index"
 
-let tooltip = TooltipPlugin
+let tooltip = tooltipPlugin
 
 let menu = menuPlugin([
   subHeader(),
