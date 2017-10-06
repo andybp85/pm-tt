@@ -5,16 +5,21 @@ import {undo, redo, history} from "prosemirror-history"
 import {keymap} from "prosemirror-keymap"
 import {baseKeymap} from "prosemirror-commands"
 
-import {menuPlugin, subHeader, bold, link} from "./menu/index"
-import {tooltipPlugin} from "./tooltip/index"
+import {menuPlugin} from "./menu"
+import {subHeader, bold, link} from "./menuItems"
+import {tooltipPlugin} from "./tooltip"
+import {dominoPlugin} from "./domino"
 
-let tooltip = tooltipPlugin
+let domino = dominoPlugin
 
 let menu = menuPlugin([
   subHeader(),
   bold(),
   link()
 ])
+
+let tooltip = tooltipPlugin
+
 
 let state = EditorState.create({
   schema,
@@ -23,7 +28,8 @@ let state = EditorState.create({
     keymap({"Mod-z": undo, "Mod-y": redo}),
     keymap(baseKeymap),
     menu,
-    tooltip
+    tooltip,
+    domino
   ]
 })
 

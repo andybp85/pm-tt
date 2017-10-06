@@ -1,4 +1,5 @@
-import {MenuView, subHeader, bold, link} from "../menu/index"
+import {MenuView} from "../menu"
+import {subHeader, bold, link} from "../menuItems"
 
 export default class Tooltip {
 

@@ -1,5 +1,5 @@
 import "./styles.css"
 
-export * from "./menuItems"
+export * from "./menuHelpers"
 export {menuPlugin} from "./menuPlugin"
 export {MenuView} from "./MenuView"

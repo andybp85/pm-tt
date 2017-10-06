@@ -13,7 +13,7 @@ import {TextField, openPrompt} from "./prompt"
 
 // :: (NodeType, ?Object) → (state: EditorState, dispatch: ?(tr: Transaction)) → bool
 // this is taken from setBlockType, semantics updated, changes are noted
-function toggleBlockType(nodeType, attrs) {
+export function toggleBlockType(nodeType, attrs) {
   return (state, dispatch) => {
     let ref = state.selection
     let $from = ref.$from
@@ -56,54 +56,7 @@ function toggleBlockType(nodeType, attrs) {
   }
 }
 
-// Helper function to create menu icons
-function icon(text, name) {
-  let span = document.createElement("span")
-  span.className = "menuicon " + name
-  span.title = name
-  span.textContent = text
-  return span
-}
-
-// function headingToggle(level, state) {
-//   if (state.selection.$from.parent.hasMarkup(schema.nodes.heading, {level}))
-//   console.log(state.selection.node)
-//   setBlockType(schema.nodes.heading, {level})
-// }
-
-export function heading(level, thisIcon, thisName) {
-  return {
-    command: toggleBlockType(schema.nodes.heading, {level}),
-    dom: icon(thisIcon, thisName)
-  }
-}
-
-export function subHeader() {
-  return heading(2, "H", "Subheader")
-}
-
-export function bold() {
-    return {
-      command: toggleMark(schema.marks.strong),
-      dom: icon("B", "strong")
-    }
-}
-
-export function italics() {
-  return {
-    command: toggleMark(schema.marks.em),
-    dom: icon("i", "em")
-  }
-}
-
-export function blockQuote() {
-  return {
-    command: toggleMark(schema.marks.blockquote),
-    dom: icon(">", "blockquote")
-  }
-}
-
-function linkItem() {
+export function linkItem() {
   return (state, dispatch) => {
 
     // if (markActive(state, markType)) {
@@ -124,32 +77,47 @@ function linkItem() {
         toggleMark(schema.marks.link)(state, dispatch)
       else
         openPrompt({
-        title: "Create a link",
-        fields: {
-          href: new TextField({
-            label: "Link target",
-            required: true,
-            clean: (val) => {
-              if (!/^https?:\/\//i.test(val))
-                val = "http://" + val
-              return val
-            }
-          }),
-          title: new TextField({label: "Title"})
-        },
-        callback(attrs) {
-          toggleMark(schema.marks.link, attrs)(state, dispatch)
-          // view.focus()
-        }
-      })
+          title: "Create a link",
+          fields: {
+            href: new TextField({
+              label: "Link target",
+              required: true,
+              clean: (val) => {
+                if (!/^https?:\/\//i.test(val))
+                  val = "http://" + val
+                return val
+              }
+            }),
+            title: new TextField({label: "Title"})
+          },
+          callback(attrs) {
+            toggleMark(schema.marks.link, attrs)(state, dispatch)
+            // view.focus()
+          }
+        })
     }
     return true
   }
 }
 
-export function link() {
+// Helper function to create menu icons
+export function icon(text, name) {
+  let span = document.createElement("span")
+  span.className = "menuicon " + name
+  span.title = name
+  span.textContent = text
+  return span
+}
+
+// function headingToggle(level, state) {
+//   if (state.selection.$from.parent.hasMarkup(schema.nodes.heading, {level}))
+//   console.log(state.selection.node)
+//   setBlockType(schema.nodes.heading, {level})
+// }
+
+export function heading(level, thisIcon, thisName) {
   return {
-    command: linkItem(),
-    dom: icon("a", "link")
+    command: toggleBlockType(schema.nodes.heading, {level}),
+    dom: icon(thisIcon, thisName)
   }
 }

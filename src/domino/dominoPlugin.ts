@@ -1,7 +1,7 @@
 import {Plugin} from "prosemirror-state"
 
-import IoDom from "./DOMInO"
+import DOMInO from "./DOMInO"
 
 export let dominoPlugin = new Plugin({
-  view(editorView) { return new IoDom(editorView) }
+  view(editorView) { return new DOMInO(editorView) }
 })
