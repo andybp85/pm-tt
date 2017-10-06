@@ -5,14 +5,15 @@ import {undo, redo, history} from "prosemirror-history"
 import {keymap} from "prosemirror-keymap"
 import {baseKeymap} from "prosemirror-commands"
 
-import {menuPlugin, subHeader, bold} from "./menu/index"
+import {menuPlugin, subHeader, bold, link} from "./menu/index"
 import {tooltipPlugin} from "./tooltip/index"
 
 let tooltip = tooltipPlugin
 
 let menu = menuPlugin([
   subHeader(),
-  bold()
+  bold(),
+  link()
 ])
 
 let state = EditorState.create({
