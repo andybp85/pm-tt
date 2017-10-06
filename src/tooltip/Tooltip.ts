@@ -1,4 +1,4 @@
-import {MenuView, subHeader, bold} from "../menu/index"
+import {MenuView, subHeader, bold, link} from "../menu/index"
 
 export default class Tooltip {
 
@@ -12,7 +12,8 @@ export default class Tooltip {
 
     this.menu = new MenuView([
       subHeader(),
-      bold()
+      bold(),
+      link()
     ], view)
 
     this.tooltip.insertAdjacentElement("afterBegin", this.menu.dom)
