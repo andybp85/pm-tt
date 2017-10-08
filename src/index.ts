@@ -10,7 +10,7 @@ import {subHeader, bold, link} from "./menuItems"
 import {tooltipPlugin} from "./tooltip"
 import {dominoPlugin} from "./domino"
 
-let domino = dominoPlugin
+// let domino = dominoPluin
 
 let menu = menuPlugin([
   subHeader(),
@@ -20,7 +20,6 @@ let menu = menuPlugin([
 
 let tooltip = tooltipPlugin
 
-
 let state = EditorState.create({
   schema,
   plugins: [
@@ -28,8 +27,7 @@ let state = EditorState.create({
     keymap({"Mod-z": undo, "Mod-y": redo}),
     keymap(baseKeymap),
     menu,
-    tooltip,
-    domino
+    tooltip
   ]
 })
 

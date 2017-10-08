@@ -34,3 +34,16 @@ export function link() {
     dom: icon("a", "link")
   }
 }
+
+function heheh() {
+  return (state, dispatch) => {
+    console.log('fire')
+  }
+}
+
+export function gore() {
+  return {
+    command: heheh(),
+    dom: icon("al", "gore")
+  }
+}
