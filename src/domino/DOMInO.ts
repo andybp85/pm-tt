@@ -8,7 +8,7 @@ export default class DOMInO {
     this.serializer = new DOMSerializer(view.state.doc)
   }
 
-  public imSuperSerializer() {
+  public SuperSerializer() {
     console.log("fire")
   }
 

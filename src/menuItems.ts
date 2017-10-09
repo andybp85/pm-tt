@@ -1,5 +1,6 @@
 import {schema} from "prosemirror-schema-basic"
 import {toggleMark} from "prosemirror-commands"
+import {DOMSerializer} from "prosemirror-model"
 
 import {icon, linkItem, heading} from "./menu/index"
 
@@ -35,15 +36,20 @@ export function link() {
   }
 }
 
-function heheh() {
+function d2c() {
   return (state, dispatch) => {
-    console.log('fire')
+    if (dispatch) {
+      let butthead = DOMSerializer.fromSchema(schema)
+      let frag = butthead.serializeFragment(state.doc.content)
+      console.log( frag )
+    }
+    return true
   }
 }
 
-export function gore() {
+export function domToConsole() {
   return {
-    command: heheh(),
-    dom: icon("al", "gore")
+    command: d2c(),
+    dom: icon("dc", "bevis")
   }
 }

@@ -6,7 +6,7 @@ import {keymap} from "prosemirror-keymap"
 import {baseKeymap} from "prosemirror-commands"
 
 import {menuPlugin} from "./menu"
-import {subHeader, bold, link} from "./menuItems"
+import {subHeader, bold, link, domToConsole} from "./menuItems"
 import {tooltipPlugin} from "./tooltip"
 import {dominoPlugin} from "./domino"
 
@@ -15,7 +15,8 @@ import {dominoPlugin} from "./domino"
 export let menu = menuPlugin([
   subHeader(),
   bold(),
-  link()
+  link(),
+  domToConsole()
 ])
 
 export let tooltip = tooltipPlugin
