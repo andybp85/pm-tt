@@ -3,3 +3,5 @@ yarn.lock
 yarn-error.log
 /.idea
 /coverage
+/dist/*
+!/dist/index.html
