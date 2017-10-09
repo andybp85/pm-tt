@@ -12,15 +12,16 @@ import {dominoPlugin} from "./domino"
 
 // let domino = dominoPluin
 
-let menu = menuPlugin([
+export let menu = menuPlugin([
   subHeader(),
   bold(),
   link()
 ])
 
-let tooltip = tooltipPlugin
+export let tooltip = tooltipPlugin
 
-let state = EditorState.create({
+
+export let state = EditorState.create({
   schema,
   plugins: [
     history(),
@@ -31,4 +32,4 @@ let state = EditorState.create({
   ]
 })
 
-let view = new EditorView(document.body, {state})
+export let view = new EditorView(document.body, {state})
