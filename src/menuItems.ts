@@ -1,4 +1,4 @@
-import {schema} from "prosemirror-schema-basic"
+import {schema} from "./schema"
 import {toggleMark} from "prosemirror-commands"
 import {DOMSerializer} from "prosemirror-model"
 

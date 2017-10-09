@@ -1,10 +1,10 @@
 import {EditorState} from "prosemirror-state"
-import {schema} from "prosemirror-schema-basic"
 import {EditorView} from "prosemirror-view"
 import {undo, redo, history} from "prosemirror-history"
 import {keymap} from "prosemirror-keymap"
 import {baseKeymap} from "prosemirror-commands"
 
+import {schema} from "./schema"
 import {menuPlugin} from "./menu"
 import {subHeader, bold, link, domToConsole} from "./menuItems"
 import {tooltipPlugin} from "./tooltip"

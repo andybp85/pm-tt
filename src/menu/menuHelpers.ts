@@ -1,5 +1,5 @@
 import {toggleMark, setBlockType, wrapIn} from "prosemirror-commands"
-import {schema} from "prosemirror-schema-basic"
+import {schema} from "../schema"
 import {NodeSelection} from "prosemirror-state"
 
 import {TextField, openPrompt} from "./prompt"
