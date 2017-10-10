@@ -55,6 +55,9 @@ export default config => {
       type: "text"
     },
     karmaTypescriptConfig: {
+      compilerOptions: {
+        "allowJs": true
+      },
       bundlerOptions: {
         transforms: [require("karma-typescript-es6-transform")()]
       },

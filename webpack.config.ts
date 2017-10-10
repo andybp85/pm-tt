@@ -14,7 +14,10 @@ const config: webpack.Configuration = {
     hot: true
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.EnvironmentPlugin(['LOOKUPURL']),
+    new webpack.EnvironmentPlugin(['ADVANCEDURL']),
+    new webpack.EnvironmentPlugin(['QUOTEURL'])
   ],
   module: {
     rules: [

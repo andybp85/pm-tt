@@ -1,1 +1,0 @@
-export {dominoPlugin} from "./dominoPlugin"

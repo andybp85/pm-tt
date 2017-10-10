@@ -5,3 +5,4 @@ yarn-error.log
 /coverage
 /dist/*
 !/dist/index.html
+envvars.sh

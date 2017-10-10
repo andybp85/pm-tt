@@ -1,3 +1,6 @@
-import "./styles.css"
+import './styles.css'
 
-export {tooltipPlugin} from "./tooltipPlugin"
+import Tooltip from './Tooltip'
+export default Tooltip
+
+export {tooltipPlugin} from './tooltipPlugin'

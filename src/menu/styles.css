@@ -16,10 +16,7 @@
 .strong, .heading { font-weight: bold; }
 .em { font-style: italic; }
 
-.Prosemirror {
-    border: thin solid grey;
-    padding: 10px;
-}
+
 
 
 .ProseMirror-prompt {

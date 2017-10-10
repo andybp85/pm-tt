@@ -1,4 +1,4 @@
-import {EditorView} from "prosemirror-view"
+import {EditorView} from 'prosemirror-view'
 
 export class MenuView {
 
@@ -10,12 +10,12 @@ export class MenuView {
     this.items = items
     this.editorView = editorView
 
-    this.dom = document.createElement("div")
-    this.dom.className = "menubar"
+    this.dom = document.createElement('div')
+    this.dom.className = 'menubar'
     items.forEach(({dom}) => this.dom.appendChild(dom))
     this.update()
 
-    this.dom.addEventListener("mousedown", e => {
+    this.dom.addEventListener('mousedown', e => {
       e.preventDefault()
       editorView.focus()
       items.forEach(({command, dom}) => {
@@ -28,7 +28,7 @@ export class MenuView {
   public update() {
     this.items.forEach(({command, dom}) => {
       let active = command(this.editorView.state, null, this.editorView)
-      dom.style.display = active ? "" : "none"
+      dom.style.display = active ? '' : 'none'
     })
   }
 

@@ -1,9 +1,9 @@
-import {toggleMark, setBlockType, wrapIn} from "prosemirror-commands"
-import {schema} from "../schema"
-import {NodeSelection} from "prosemirror-state"
+import {toggleMark, setBlockType, wrapIn} from 'prosemirror-commands'
+import {schema} from '../schema'
+import {NodeSelection} from 'prosemirror-state'
 
-import {TextField, openPrompt} from "./prompt"
-// import {MenuItem} from "./MenuItem"
+import {TextField, openPrompt} from './prompt'
+// import {MenuItem} from './MenuItem'
 
 // function markActive(state, type) {
 //   let {from, $from, to, empty} = state.selection
@@ -77,18 +77,18 @@ export function linkItem() {
         toggleMark(schema.marks.link)(state, dispatch)
       else
         openPrompt({
-          title: "Create a link",
+          title: 'Create a link',
           fields: {
             href: new TextField({
-              label: "Link target",
+              label: 'Link target',
               required: true,
               clean: (val) => {
                 if (!/^https?:\/\//i.test(val))
-                  val = "http://" + val
+                  val = 'http://' + val
                 return val
               }
             }),
-            title: new TextField({label: "Title"})
+            title: new TextField({label: 'Title'})
           },
           callback(attrs) {
             toggleMark(schema.marks.link, attrs)(state, dispatch)
@@ -102,8 +102,8 @@ export function linkItem() {
 
 // Helper function to create menu icons
 export function icon(text, name) {
-  let span = document.createElement("span")
-  span.className = "menuicon " + name
+  let span = document.createElement('span')
+  span.className = 'menuicon ' + name
   span.title = name
   span.textContent = text
   return span
