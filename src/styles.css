@@ -2,3 +2,9 @@
     border: thin solid grey;
     padding: 10px 50px;
 }
+
+blockquote {
+    border-left: thick solid grey;
+    margin-left: 5px;
+    padding-left: 2px;
+}

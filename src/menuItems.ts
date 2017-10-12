@@ -1,9 +1,9 @@
-import {schema} from './schema'
-import {toggleMark} from 'prosemirror-commands'
+import {schema, wrapInList} from './schema'
+import {toggleMark, wrapIn} from 'prosemirror-commands'
 // import {domino} from './index'
 // import {contentHandler} from './content-handler'
 
-import {icon, linkItem, heading} from './menu/index'
+import {icon, linkItem, heading, toggleBlockType} from './menu'
 
 export function subHeader() {
   return heading(2, 'H', 'Subheader')
@@ -23,17 +23,53 @@ export function italics() {
   }
 }
 
-export function blockQuote() {
+export function blockquote() {
   return {
-    command: toggleMark(schema.marks.blockquote),
-    dom: icon('>', 'blockquote')
+    command: wrapIn(schema.nodes.blockquote),
+    dom: icon('"', 'blockquote')
+  }
+}
+
+export function bullet_list() {
+  return {
+    command: wrapInList(schema.nodes.bullet_list),
+    dom: icon('u', 'bullet list')
+  }
+}
+
+export function ordered_list() {
+  return {
+    command: wrapInList(schema.nodes.ordered_list),
+    dom: icon('o', 'ordered list')
+  }
+}
+
+export function sup() {
+  return {
+    command: toggleMark(schema.marks.sup),
+    dom: icon('∧', 'superscript')
+  }
+}
+
+export function sub() {
+  return {
+    command: toggleMark(schema.marks.sub),
+    dom: icon('∨', 'subscript')
+  }
+}
+
+//////////////////////////////////////////////////
+export function pullquote() {
+  return {
+    command: wrapIn(schema.nodes.pullquote),
+    dom: icon('>', 'pullquote')
   }
 }
 
 export function link() {
   return {
     command: linkItem(),
-    dom: icon('a', 'link')
+    dom: icon('o-o', 'link')
   }
 }
 
@@ -55,3 +91,4 @@ export function link() {
 //     dom: icon('dc', 'serialize`')
 //   }
 // }
+

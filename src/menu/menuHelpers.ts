@@ -1,5 +1,5 @@
 import {toggleMark, setBlockType, wrapIn} from 'prosemirror-commands'
-import {schema} from '../schema'
+import {schema, wrapInList} from '../schema'
 import {NodeSelection} from 'prosemirror-state'
 
 import {TextField, openPrompt} from './prompt'
@@ -11,9 +11,18 @@ import {TextField, openPrompt} from './prompt'
 //   else return state.doc.rangeHasMark(from, to, type)
 // }
 
+// Helper function to create menu icons
+export function icon(text, name) {
+  let span = document.createElement('span')
+  span.className = 'menuicon ' + name
+  span.title = name
+  span.textContent = text
+  return span
+}
+
 // :: (NodeType, ?Object) → (state: EditorState, dispatch: ?(tr: Transaction)) → bool
 // this is taken from setBlockType, semantics updated, changes are noted
-export function toggleBlockType(nodeType, attrs) {
+export function toggleBlockType(nodeType: Node, attrs = {}) {
   return (state, dispatch) => {
     let ref = state.selection
     let $from = ref.$from
@@ -100,24 +109,13 @@ export function linkItem() {
   }
 }
 
-// Helper function to create menu icons
-export function icon(text, name) {
-  let span = document.createElement('span')
-  span.className = 'menuicon ' + name
-  span.title = name
-  span.textContent = text
-  return span
+function addListItems() {
+
 }
 
-// function headingToggle(level, state) {
-//   if (state.selection.$from.parent.hasMarkup(schema.nodes.heading, {level}))
-//   console.log(state.selection.node)
-//   setBlockType(schema.nodes.heading, {level})
-// }
-
-export function heading(level, thisIcon, thisName) {
+export function heading(level, headingIcon, headingName) {
   return {
     command: toggleBlockType(schema.nodes.heading, {level}),
-    dom: icon(thisIcon, thisName)
+    dom: icon(headingIcon, headingName)
   }
 }

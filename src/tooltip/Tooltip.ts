@@ -1,3 +1,5 @@
+import {EditorView} from 'prosemirror-view'
+
 import {MenuView} from '../menu'
 import {subHeader, bold, link} from '../menuItems'
 
@@ -6,16 +8,12 @@ export default class {
   private tooltip: any
   private menu: any
 
-  constructor(view: EditorView) {
+  constructor(view: EditorView, items: object[]) {
     this.tooltip = document.createElement('div')
     this.tooltip.className = 'tooltip'
     view.dom.parentNode.insertBefore(this.tooltip, view.dom)
 
-    this.menu = new MenuView([
-      subHeader(),
-      bold(),
-      link()
-    ], view)
+    this.menu = new MenuView(items, view)
 
     this.tooltip.insertAdjacentElement('afterBegin', this.menu.dom)
 
