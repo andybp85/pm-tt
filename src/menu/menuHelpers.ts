@@ -2,7 +2,7 @@ import {toggleMark, setBlockType, wrapIn} from 'prosemirror-commands'
 import {schema, wrapInList} from '../schema'
 import {NodeSelection} from 'prosemirror-state'
 
-import {TextField, openPrompt} from './prompt'
+import {TextField, openPrompt} from '../prompt'
 // import {MenuItem} from './MenuItem'
 
 // function markActive(state, type) {
@@ -107,10 +107,6 @@ export function linkItem() {
     }
     return true
   }
-}
-
-function addListItems() {
-
 }
 
 export function heading(level, headingIcon, headingName) {
