@@ -3,7 +3,7 @@ import {toggleMark, wrapIn} from 'prosemirror-commands'
 // import {domino} from './index'
 // import {contentHandler} from './content-handler'
 
-import {icon, linkItem, heading, toggleBlockType} from './menu'
+import {icon, linkItem, heading, toggleBlockType} from './menuHelpers'
 
 export function subHeader() {
   return heading(2, 'H', 'Subheader')

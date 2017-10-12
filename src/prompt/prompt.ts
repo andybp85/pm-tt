@@ -30,19 +30,24 @@ export function openPrompt(options) {
   wrapper.className = prefix
 
   let mouseOutside = e => { if (!wrapper.contains(e.target)) close() }
+
   setTimeout(() => window.addEventListener('mousedown', mouseOutside), 50)
+
   let close = () => {
     window.removeEventListener('mousedown', mouseOutside)
     if (wrapper.parentNode) wrapper.parentNode.removeChild(wrapper)
   }
 
   let domFields = []
-  for (let name in options.fields) domFields.push(options.fields[name].render())
+
+  for (let name in options.fields)
+    domFields.push(options.fields[name].render())
 
   let submitButton = document.createElement('button')
   submitButton.type = 'submit'
   submitButton.className = prefix + '-submit'
   submitButton.textContent = 'OK'
+
   let cancelButton = document.createElement('button')
   cancelButton.type = 'button'
   cancelButton.className = prefix + '-cancel'
@@ -54,6 +59,7 @@ export function openPrompt(options) {
   domFields.forEach(field => {
     form.appendChild(document.createElement('div')).appendChild(field)
   })
+
   let buttons = form.appendChild(document.createElement('div'))
   buttons.className = prefix + '-buttons'
   buttons.appendChild(submitButton)
