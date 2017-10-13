@@ -2,6 +2,7 @@ import {toggleMark} from 'prosemirror-commands'
 
 import {schema} from '../schema'
 import {TextField, openPrompt} from '../prompt'
+
 import makeForm from './form'
 
 export function linkItem() {

@@ -3,6 +3,8 @@ import {NodeSelection} from 'prosemirror-state'
 
 import {schema, wrapInList} from './schema'
 import {linkItem} from './link'
+import {specialChars} from './special-chars'
+
 // import {domino} from './index'
 // import {contentHandler} from './content-handler'
 
@@ -141,6 +143,13 @@ export function link() {
   }
 }
 
+export function specialCharacters() {
+  return {
+    command: specialChars(),
+    dom: icon('Ω', 'Special Chars')
+  }
+}
+
 // function d2c() {
 //   return (state, dispatch) => {
 //     if (dispatch) {
@@ -159,4 +168,3 @@ export function link() {
 //     dom: icon('dc', 'serialize`')
 //   }
 // }
-

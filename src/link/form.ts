@@ -27,15 +27,6 @@ function reportInvalid(dom, message) {
 
 export default function(options, wrapper, prefix) {
 
-  let mouseOutside = e => { if (!wrapper.contains(e.target)) close() }
-
-  setTimeout(() => window.addEventListener('mousedown', mouseOutside), 50)
-
-  let close = () => {
-    window.removeEventListener('mousedown', mouseOutside)
-    if (wrapper.parentNode) wrapper.parentNode.removeChild(wrapper)
-  }
-
   let domFields = []
 
   for (let name in options.fields)
@@ -53,6 +44,7 @@ export default function(options, wrapper, prefix) {
   cancelButton.addEventListener('click', close)
 
   let form = wrapper.appendChild(document.createElement('form'))
+
   if (options.title) form.appendChild(document.createElement('h5')).textContent = options.title
   domFields.forEach(field => {
     form.appendChild(document.createElement('div')).appendChild(field)

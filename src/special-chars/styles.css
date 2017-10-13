@@ -1,0 +1,6 @@
+table.ProseMirror-prompt-special-characters td {
+    cursor: pointer;
+    font-size: .8em;
+    height: 20px;
+    width: 20px;
+}

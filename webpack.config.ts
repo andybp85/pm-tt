@@ -1,16 +1,16 @@
-import * as webpack from "webpack"
-import * as path from "path"
+import * as webpack from 'webpack'
+import * as path from 'path'
 
 const config: webpack.Configuration = {
   entry: [
-    "webpack-dev-server/client?http://127.0.0.1:8080",
-    "./src/index.ts"
+    'webpack-dev-server/client?http://127.0.0.1:8080',
+    './src/index.ts'
   ],
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map',
   devServer: {
-    host: "127.0.0.1",
-    publicPath: "/",
-    contentBase: "./dist/",
+    host: '127.0.0.1',
+    publicPath: '/',
+    contentBase: './dist/',
     hot: true
   },
   plugins: [
@@ -23,27 +23,22 @@ const config: webpack.Configuration = {
     rules: [
       {
         test: /\.css$/,
-        use: [ "style-loader", "css-loader" ],
+        use: [ 'style-loader', 'css-loader' ],
         exclude: /node_modules/
       },
       {
         test: /\.ts$/,
-        use: "ts-loader",
+        use: 'ts-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.html$/,
-        exclude: /node_modules/,
-        use: {loader: 'html-loader'}
       }
     ]
   },
   resolve: {
-      extensions: [ ".ts", ".js" ]
+      extensions: [ '.ts', '.js']
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js"
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
   }
 }
 
