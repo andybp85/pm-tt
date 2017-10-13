@@ -1,0 +1,1 @@
+export {linkItem} from './link'

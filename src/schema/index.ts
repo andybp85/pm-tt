@@ -15,13 +15,13 @@ let nodes = addListNodes(baseSchema.spec.nodes, 'paragraph (ordered_list | bulle
   })
 
 marks.sup = {
-  parseDOM: [{tag: "sup"}],
-  toDOM() { return ["sup"] }
+  parseDOM: [{tag: 'sup'}],
+  toDOM() { return ['sup'] }
 }
 
 marks.sub = {
-  parseDOM: [{tag: "sub"}],
-  toDOM() { return ["sub"] }
+  parseDOM: [{tag: 'sub'}],
+  toDOM() { return ['sub'] }
 }
 
 // export our entire schema and the helpers from the list schema
