@@ -2,6 +2,7 @@ import {toggleMark} from 'prosemirror-commands'
 
 import {schema} from '../schema'
 import {TextField, openPrompt} from '../prompt'
+import makeForm from './form'
 
 export function linkItem() {
   return (state, dispatch) => {
@@ -23,7 +24,7 @@ export function linkItem() {
       if (selectedLinkNodes.length > 0)
         toggleMark(schema.marks.link)(state, dispatch)
       else
-        openPrompt({
+        openPrompt( makeForm, {
           title: 'Create a link',
           fields: {
             href: new TextField({

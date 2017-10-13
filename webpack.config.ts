@@ -30,6 +30,11 @@ const config: webpack.Configuration = {
         test: /\.ts$/,
         use: "ts-loader",
         exclude: /node_modules/
+      },
+      {
+        test: /\.html$/,
+        exclude: /node_modules/,
+        use: {loader: 'html-loader'}
       }
     ]
   },

@@ -14,9 +14,6 @@ import {subHeader, bold, italics, link,
         bullet_list, ordered_list, blockquote,
         sup, sub} from './menuItems'
 import {tooltipPlugin} from './tooltip'
-// import {dominoPlugin} from './content-handler'
-
-// let content-handler = dominoPluin
 
 export const menu = menuPlugin([
   subHeader(),
@@ -37,8 +34,6 @@ export const tooltip = tooltipPlugin([
   link(),
   blockquote()
 ])
-
-// export let domino = dominoPlugin
 
 const customKeymap = {
   'Mod-z': undo,
