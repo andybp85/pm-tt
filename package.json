@@ -4,19 +4,19 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "prosemirror-commands": "^0.24.0",
-    "prosemirror-history": "^0.24.0",
-    "prosemirror-keymap": "^0.24.0",
-    "prosemirror-model": "^0.24.0",
-    "prosemirror-schema-basic": "^0.24.0",
-    "prosemirror-schema-list": "^0.24.0",
-    "prosemirror-state": "^0.24.0",
-    "prosemirror-transform": "^0.24.0",
-    "prosemirror-view": "^0.24.0"
+    "prosemirror-commands": "^1.0.1",
+    "prosemirror-history": "^1.0.0",
+    "prosemirror-keymap": "^1.0.0",
+    "prosemirror-model": "^1.0.0",
+    "prosemirror-schema-basic": "^1.0.0",
+    "prosemirror-schema-list": "^1.0.0",
+    "prosemirror-state": "^1.0.0",
+    "prosemirror-transform": "^1.0.0",
+    "prosemirror-view": "^1.0.0"
   },
   "devDependencies": {
     "@types/jasmine": "^2.6.0",
-    "@types/node": "^8.0.33",
+    "@types/node": "^8.0.34",
     "@types/webpack": "^3.0.13",
     "concurrently": "^3.5.0",
     "css-loader": "^0.28.7",
@@ -32,13 +32,13 @@
     "karma-super-dots-reporter": "^0.1.0",
     "karma-typescript": "^3.0.7",
     "karma-typescript-es6-transform": "^1.0.2",
-    "prosemirror-test-builder": "^0.24.0",
+    "prosemirror-test-builder": "^1.0.0",
     "style-loader": "^0.19.0",
     "ts-loader": "^2.3.7",
     "ts-node": "^3.3.0",
     "typescript": "^2.5.3",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack": "^3.7.1",
+    "webpack-dev-server": "^2.9.2"
   },
   "scripts": {
     "start": "concurrently 'webpack-dev-server --env development' 'karma start'",

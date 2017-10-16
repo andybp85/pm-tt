@@ -42,7 +42,10 @@ export default class {
     // Find a center-ish x position from the selection endpoints (when
     // crossing lines, end may be more to the left)
     let left = Math.max((start.left + end.left) / 2, start.left + 3)
-    this.tooltip.style.left = (left - box.left) + 'px'
+
+    this.tooltip.style.left = (left < (this.tooltip.offsetWidth / 2) ?
+      (this.tooltip.offsetWidth / 2) + 'px' : this.tooltip.style.left = (left - box.left) + 'px')
+
     this.tooltip.style.bottom = (box.bottom - start.top) + 'px'
     // this.tooltip.textContent = to - from
 
