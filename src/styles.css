@@ -1,6 +1,7 @@
 .Prosemirror {
     border: thin solid grey;
     padding: 10px 50px;
+    margin-top: 10px;
 }
 
 blockquote {

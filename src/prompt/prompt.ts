@@ -1,3 +1,6 @@
+// this is taken and modified from prosemirror-example-setup
+// https://github.com/ProseMirror/prosemirror-example-setup/blob/master/src/prompt.js
+
 const prefix = 'ProseMirror-prompt'
 
 // takes a callback and options for the callback that define the content of the prompt

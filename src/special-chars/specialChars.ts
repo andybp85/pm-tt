@@ -21,25 +21,3 @@ export function specialChars() {
     return true
   }
 }
-
-export function SpecialCharsPlugin() {
-  return new Plugin({
-    view(editorView) { return new SpecialChars(editorView) }
-  })
-}
-
-class SpecialChars {
-
-  constructor(editorView: EditorView) {
-    console.log('fire constructor')
-  }
-
-  public update() {
-    console.log('fire update')
-
-  }
-
-  public destroy() {
-
-  }
-}

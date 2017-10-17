@@ -1,12 +1,10 @@
 .menubar {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    line-height: 0.1;
+    margin-top: 10px;
+    padding-left: 50px;
 }
 .menuicon {
     display: inline-block;
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
     color: #888;
-    line-height: 1;
     padding: 0 7px;
     margin: 1px;
     cursor: pointer;
@@ -14,10 +12,8 @@
     min-width: 1.4em;
 }
 .strong, .heading { font-weight: bold; }
+
 .em { font-style: italic; }
-
-
-
 
 .ProseMirror-prompt {
     background: white;
@@ -58,3 +54,4 @@
     content: "âœ•";
     font-size: 12px;
 }
+

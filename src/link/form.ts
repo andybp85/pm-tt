@@ -1,3 +1,6 @@
+// this is taken directly from prosemirror-example-setup
+// https://github.com/ProseMirror/prosemirror-example-setup/blob/master/src/prompt.js
+
 function getValues(fields, domFields) {
   let result = Object.create(null), i = 0
   for (let name in fields) {

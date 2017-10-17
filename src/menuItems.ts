@@ -6,7 +6,7 @@ import {linkItem} from './link'
 import {specialChars} from './special-chars'
 
 // import {domino} from './index'
-// import {contentHandler} from './content-handler'
+// import {contentHandler} from './__content-handler'
 
 // function markActive(state, type) {
 //   let {from, $from, to, empty} = state.selection
@@ -68,15 +68,15 @@ function toggleBlockType(nodeType: Node, attrs = {}) {
   }
 }
 
-function heading(level, headingIcon, headingName) {
-  return {
-    command: toggleBlockType(schema.nodes.heading, {level}),
-    dom: icon(headingIcon, headingName)
-  }
+function heading(level) {
+  return toggleBlockType(schema.nodes.heading, {level})
 }
 
 export function subHeader() {
-  return heading(2, 'H', 'Subheader')
+  return {
+    command: heading(2),
+    dom: icon('H', 'Subheader')
+  }
 }
 
 export function bold() {

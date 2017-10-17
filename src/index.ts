@@ -64,8 +64,6 @@ const customKeymap = {
   'Mod-]': sinkListItem(schema.nodes.list_item)
 }
 
-import {SpecialCharsPlugin} from './special-chars/specialChars'
-
 export const state = EditorState.create({
   schema,
   plugins: [
@@ -73,8 +71,7 @@ export const state = EditorState.create({
     keymap(customKeymap),
     keymap(baseKeymap),
     menu,
-    tooltip,
-    SpecialCharsPlugin()
+    tooltip
   ]
 })
 

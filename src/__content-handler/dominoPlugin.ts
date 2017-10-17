@@ -1,4 +1,4 @@
-import {Plugin} from 'prosemirror-state'
+// import {Plugin} from 'prosemirror-state'
 
 // import {DOMInO} from './contentHandler'
 //
