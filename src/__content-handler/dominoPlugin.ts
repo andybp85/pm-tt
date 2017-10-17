@@ -1,5 +1,5 @@
 // import {Plugin} from 'prosemirror-state'
-
+//
 // import {DOMInO} from './contentHandler'
 //
 // export let dominoPlugin = new Plugin({

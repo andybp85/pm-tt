@@ -14,6 +14,8 @@ import {tooltipPlugin} from './tooltip'
 import {subHeader, bold, italics, link, bullet_list, ordered_list, blockquote, sup, sub,
   specialCharacters} from './menuItems'
 
+import {specialCharsPlugin} from './special-chars'
+
 export const menu = menuPlugin([
   subHeader(),
   bold(),
@@ -50,7 +52,8 @@ export const state = EditorState.create({
     keymap(customKeymap),
     keymap(baseKeymap),
     menu,
-    tooltip
+    tooltip,
+    specialCharsPlugin()
   ]
 })
 
