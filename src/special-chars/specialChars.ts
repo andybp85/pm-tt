@@ -2,7 +2,6 @@ import {EditorView} from 'prosemirror-view'
 import {Plugin} from 'prosemirror-state'
 
 export const specialCharsDOM = document.createElement('div')
-specialCharsDOM.className = 'ProseMirror-prompt'
 
 export function specialChars() {
   return (state, dispatch) => {

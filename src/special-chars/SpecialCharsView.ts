@@ -14,11 +14,16 @@ export class SpecialCharsView {
     this.specialChars = specialChars()
 
     this.dom = document.body.appendChild(specialCharsDOM)
-    this.dom.style.display = 'none'
-    this.dom.className = 'special-characters'
+    this.dom.className = 'ProseMirror-prompt'
 
     let table = this.populateTable(document.createElement('table'))
     this.dom.appendChild(table)
+    let box = this.dom.getBoundingClientRect()
+    Object.assign(this.dom.style, {
+      display: 'none',
+      top: ((window.innerHeight - box.height) / 4) + 'px',
+      left: ((window.innerWidth - box.width) / 2) + 'px'
+    })
 
     table.addEventListener('click', (e: any) => {
       if (e.target.nodeName === 'TD') {
@@ -61,4 +66,3 @@ export class SpecialCharsView {
   }
 
 }
-
